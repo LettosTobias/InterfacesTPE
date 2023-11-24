@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   padding: 0%;
@@ -189,6 +193,23 @@ body {
   position: relative;
   width: 332px;
   max-height: 500px;
+  color: #000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.1s ease;
+}
+.spidersCards.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.spidersCards p {
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 10px;
+  padding-top: 10px;
 }
 .testSection {
   background: url("./image\ 223\ \(1\).png"), no-repeat;
@@ -201,26 +222,69 @@ body {
 }
 .testSection img:first-child {
   width: 550.108px;
-  height: 326.509px;
-  transform: rotate(-13.078deg);
+  /* transform: rotate(-13.078deg); */
   flex-shrink: 0;
+  object-fit: cover;
   position: relative;
   top: -100px;
 }
 .testSection img:nth-child(2) {
   width: 550.108px;
-  height: 400.509px;
-  transform: rotate(-15.474deg);
+  /* transform: rotate(-15.474deg); */
   position: relative;
   flex-shrink: 0;
-  top: -260px;
+  object-fit: cover;
+  top: -320px;
 }
 .testSection img:last-child {
   width: 546.108px;
-  height: 326.509px;
-  transform: rotate(-20deg);
-  transform: skew(20, -20deg);
   flex-shrink: 0;
+  object-fit: cover;
   position: relative;
-  top: -400px;
+  top: -650px;
+  left: 70px;
+}
+.vengadores {
+  color: white;
+  position: relative;
+  top: 3450px;
+  height: 527.626px;
+}
+.vengadores h2 {
+  color: #fff;
+  max-width: 600px;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px; /* 56.7px */
+  letter-spacing: 0.005em;
+  margin-bottom: 40px;
+}
+.vengadores .vengadoresBG {
+  background: url("./image\ 222\ 2.png");
+  position: relative;
+}
+.vengadores .vengadoresBG .hojas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.vengadores .cpl,
+.pantera,
+.hulk {
+  position: absolute;
+  top: 200px;
+  left: 0;
+}
+.vengadores .pantera {
+  top: 0px;
+  left: 37%;
+}
+.vengadores .hulk {
+  left: 63%;
+  top: 60%;
 }
