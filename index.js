@@ -94,12 +94,16 @@ handleScroll();
 
         
 
-
 let spiderRosa = document.querySelector(".spRosaDos");
 let spiderRojo = document.querySelector(".spDos");
 let spiderNegro = document.querySelector(".spNegroDos");
 let fondo = document.querySelector(".tresSpider");
-let fondo2 = document.querySelector(".skewInverso");
+let fondoCompleto = document.querySelector(".juntos");
+
+
+
+
+
 
 function spiderHover(){
 
@@ -112,10 +116,24 @@ function spiderHover(){
   spiderNegro.style.filter = "blur(10px)";
   spiderRojo.style.filter = "blur(10px)";
 
-  fondo.classList.toggle('fondoRosa');
-  fondo2.classList.toggle('fondoRosa2');
+  fondoCompleto.style.zIndex = 2;
+  fondo.classList.add('fondoRosa');
 }    
 
+function spiderLeave(){
+
+    spiderRosa.style.scale = "1";
+    spiderNegro.style.scale = "1";
+    spiderRojo.style.scale = "1";
+  
+  
+    spiderNegro.style.filter = "blur(0px)";
+    spiderRojo.style.filter = "blur(0px)";
+    fondoCompleto.style.zIndex = 0; 
+    
+    fondo.classList.remove('fondoRosa');
+    
+}
 
 function spiderHover2(){
 
@@ -128,10 +146,26 @@ function spiderHover2(){
   spiderNegro.style.filter = "blur(10px)";
   spiderRosa.style.filter = "blur(10px)";
 
-  fondo.classList.toggle('fondoAzul');
-  fondo2.style.borderbottom = "20px solid #2552C8";
+  fondoCompleto.style.zIndex = 2;
+  fondo.classList.add('fondoAzul');
 }    
 
+
+
+function spiderLeave2(){
+
+    spiderRosa.style.scale = "1";
+    spiderNegro.style.scale = "1";
+    spiderRojo.style.scale = "1";
+  
+  
+    spiderNegro.style.filter = "blur(0px)";
+    spiderRosa.style.filter = "blur(0px)";
+
+    fondoCompleto.style.zIndex = 0;
+    fondo.classList.remove('fondoAzul');
+    
+}
 
 function spiderHover3(){
 
@@ -144,7 +178,23 @@ function spiderHover3(){
   spiderRojo.style.filter = "blur(10px)";
   spiderRosa.style.filter = "blur(10px)";
 
-  fondo.classList.toggle('fondoNegro');
+  fondoCompleto.style.zIndex = 2;
+  fondo.classList.add('fondoNegro');
 }    
 
 
+function spiderLeave3(){
+
+    spiderRosa.style.scale = "1";
+    spiderNegro.style.scale = "1";
+    spiderRojo.style.scale = "1";
+  
+  
+    spiderRosa.style.filter = "blur(0px)";
+    spiderRojo.style.filter = "blur(0px)";
+    fondoCompleto.style.zIndex = 0;
+
+       
+    fondo.classList.remove('fondoNegro');
+    
+}
