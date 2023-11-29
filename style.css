@@ -422,7 +422,7 @@ body {
   top: 4100px;
   z-index: -2;
   background-color: #fff;
-  height: 2000px;
+  height: 2500px;
   width: 1280px;
   transform: skew(0deg, 6deg);
   font-weight: 600;
@@ -439,47 +439,6 @@ body {
 
 
 
-.scrollSection{
-
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-.card{
-
-  margin-top: 100px;
-  margin: 100px;
-  transform: skew(0deg, -6deg);
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-}
-
-
-.card p {
-
-  font-family: Lato;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 94.5%; /* 18.9px */
-
-  margin-top: 20px;
-}
-.card h1{
-
-
-  
-  font-family: Lato;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 94.5%; /* 37.8px */
-    
-
-}
 
 
 
@@ -491,7 +450,7 @@ body {
   font-size:30px;
   width: 1280px;
   font-weight: 300;
-  top:6200px;
+  top:6680px;
   margin-left: 70px;
 
 }
@@ -505,7 +464,7 @@ body {
 
 .parteFinal{
   position: absolute;
-  top: 6500px;
+  top: 7000px;
   width: 1280px;
 
 }
@@ -904,4 +863,69 @@ footer img{
     background-position: -300px 0 ;
   }
 
+}
+
+
+.scrollSection{
+
+  transform: skew(0deg, -6deg);
+  margin: 100px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.scrollSection img{
+  top:0px;
+  width: fit-content;
+  height: fit-content;
+}
+
+
+.textColumn{
+
+  width:400px;
+}
+
+
+.textColumn div{
+
+  width: 100%;
+  margin: 30px;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.textColumn div h1{
+
+  font-family: Lato;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+
+.textColumn div p{
+
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+
+
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+
+.visible{
+
+  opacity: 1;
+  transition: all ease;
 }

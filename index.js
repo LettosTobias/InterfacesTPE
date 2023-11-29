@@ -24,6 +24,57 @@ window.onscroll = function () {
   }
 
 
+  let texto1 = document.getElementById("texto1");
+  let texto2 = document.getElementById("texto2");
+  let texto3 = document.getElementById("texto3");
+  let texto4 = document.getElementById("texto4");
+
+  let imagen = document.querySelector(".imagenScroll");
+
+  console.log(scrollPos);
+
+  if(scrollPos>4100&&scrollPos<5500){
+
+        imagen.style.position = "sticky";
+        imagen.style.top = "150px";
+
+        texto1.style.opacity = 1;
+
+
+
+
+
+        if(scrollPos>4400){
+            
+            texto1.style.opacity = 0;
+            
+      
+        }
+        if(scrollPos> 4400 && scrollPos<4666){
+            texto2.style.opacity = 1;
+        }
+        if(scrollPos> 4666 || scrollPos < 4400 ){
+    
+            texto2.style.opacity= 0;
+        }
+        if(scrollPos> 4866 ){
+            texto3.style.opacity= 1;
+        }
+        if(scrollPos> 5100 || scrollPos < 4860 ){
+       
+            texto3.style.opacity= 0;
+
+        }
+        if(scrollPos> 5300){
+            texto4.style.opacity= 1;
+        }
+
+        if(scrollPos < 5300){
+          texto4.style.opacity= 0;
+        }
+        
+    
+    }
 
 
 
@@ -52,43 +103,18 @@ window.onscroll = function () {
     cardRuta1.style.bottom = -posY * (0.01) + "px";
     cardRuta2.style.bottom = -posY * (0.03) + "px";
     cardRuta3.style.bottom = -posY * (0.04) + "px";
+
+
+
+
+
+    
       
 
 };
 
 // Obtén las referencias a los elementos
 let cards = document.querySelectorAll(".spidersCards");
-
-// Función para verificar si un elemento está en el viewport
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-// Función para manejar el scroll
-function handleScroll() {
-  cards.forEach((card) => {
-    if (isElementInViewport(card)) {
-      card.classList.add("visible");
-    }
-    if (window.scrollY > 3000 || window.scrollY < 1000) {
-      card.classList.remove("visible");
-    }
-  });
-}
-
-// Adjunta el evento de scroll
-window.addEventListener("scroll", handleScroll);
-
-// Llama a handleScroll al cargar la página para verificar los elementos iniciales
-handleScroll();
-
 
 
 
@@ -198,3 +224,9 @@ function spiderLeave3(){
     fondo.classList.remove('fondoNegro');
     
 }
+
+
+
+
+
+
