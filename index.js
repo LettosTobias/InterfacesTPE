@@ -44,6 +44,9 @@ window.onscroll = function () {
 
 
 
+        if(scrollPos < 4400){
+          imagen.src = "./img/scroll1.png";
+        }
         if(scrollPos>4400){
             
             texto1.style.opacity = 0;
@@ -52,13 +55,16 @@ window.onscroll = function () {
         }
         if(scrollPos> 4400 && scrollPos<4666){
             texto2.style.opacity = 1;
+            imagen.src = "./img/scroll2.png";
         }
+  
         if(scrollPos> 4666 || scrollPos < 4400 ){
     
             texto2.style.opacity= 0;
         }
         if(scrollPos> 4866 ){
             texto3.style.opacity= 1;
+            imagen.src = "./img/scroll3.png";
         }
         if(scrollPos> 5100 || scrollPos < 4860 ){
        
@@ -67,6 +73,7 @@ window.onscroll = function () {
         }
         if(scrollPos> 5300){
             texto4.style.opacity= 1;
+            imagen.src = "./img/scroll4.png";
         }
 
         if(scrollPos < 5300){

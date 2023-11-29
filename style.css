@@ -880,6 +880,7 @@ footer img{
   top:0px;
   width: fit-content;
   height: fit-content;
+  transition: src 1s ease;
 }
 
 
